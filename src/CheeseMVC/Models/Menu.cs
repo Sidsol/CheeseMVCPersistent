@@ -5,8 +5,10 @@ using System.Threading.Tasks;
 
 namespace CheeseMVC.Models
 {
-    public enum CheeseType
+    public class Menu
     {
-        Hard, Soft, Fake
+        public int ID { get; set; }
+        public string Name { get; set; }
+
     }
 }
