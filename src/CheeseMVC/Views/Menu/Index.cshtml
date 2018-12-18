@@ -1,15 +1,17 @@
-﻿@model List<CheeseMVC.Models.Menu>
+﻿@model IEnumerable<CheeseMVC.Models.Menu>
 
-@{
-    ViewData["Title"] = "Index";
-}
 
-<h2>Index</h2>
+<h2>Menu</h2>
+
+<p><a asp-controller="Menu" asp-action="Add">Add Menu</a></p>
 <ul>
     @foreach (var menu in Model)
     {
-        <li><a asp-controller="Menu" asp-action="menu" asp-route-id="@menu">Add Cheese</a></li>
+        <li>
+            <a asp-controller="Menu"
+               asp-action="ViewMenu"
+               asp-route-id="@menu.ID">@menu.Name</a>
+        </li>
     }
 </ul>
 
-    <p><a asp-controller="Menu" asp-action="Add">Add Menu</a></p>

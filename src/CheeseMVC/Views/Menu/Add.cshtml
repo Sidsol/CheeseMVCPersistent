@@ -5,13 +5,13 @@
 
 <h2>Add New Menu</h2>
 
-<form asp-controller="Cheese" asp-action="Add" method="post">
+<form asp-controller="Menu" asp-action="Add" method="post">
     <!--<div class="text-danger">Model.SaveChangesError</div>-->
     <div class="form-group">
         <label asp-for="Name"></label>
         <input class="form-control" asp-for="Name" />
         <span asp-validation-for="Name"></span>
-    </div>method="post">
+    </div>
 
-    <input type="submit" value="Add Cheese" />
+    <input type="submit" value="Add Menu" />
 </form>

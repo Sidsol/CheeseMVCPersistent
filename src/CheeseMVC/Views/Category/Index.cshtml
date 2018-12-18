@@ -8,7 +8,11 @@
 <ul>
     @foreach (var category in Model)
     {
-        <li>@category.Name</li>
+    <li>
+        <a asp-controller="Cheese"
+           asp-action="Category"
+           asp-route-id="@category.ID">@category.Name</a>
+    </li>
     }
 </ul>
 
